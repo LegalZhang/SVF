@@ -24,3 +24,6 @@ file(
 add_library(SvfCoreObj OBJECT ${SVF_CORE_SOURCES})
 add_library(SvfCore STATIC)
 target_link_libraries(SvfCore PUBLIC ${Z3_LIBRARIES} SvfCoreObj)
+
+set(CMAKE_CXX_STANDARD 17)
+

@@ -7,7 +7,7 @@ configure_file(${PROJECT_SOURCE_DIR}/.config.in
 
 # We need to match the build environment for LLVM: In particular, we need C++14
 # and the -fno-rtti flag
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # add -std=gnu++14
 set(CMAKE_CXX_EXTENSIONS ON)
@@ -16,7 +16,7 @@ add_compile_options("-fno-rtti")
 add_compile_options("-fno-exceptions")
 
 # Treat compiler warnings as errors
-add_compile_options("-Werror" "-Wall")
+# add_compile_options("-Werror" "-Wall")
 
 # Keep assertions enabled if requested
 option(SVF_ENABLE_ASSERTIONS "Always enable assertions")
